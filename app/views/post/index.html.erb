@@ -1,0 +1,7 @@
+<!-- 각 게시물 show 페이지 생성 -->
+<% @boards.each do |board| %>
+    <h1><%= link_to board.title, "/show/#{board.id}" %></h1>
+    <%= link_to '삭제', "/destroy/#{board.id}" %>
+    <%= link_to '수정', "/edit/#{board.id}" %>
+    
+<% end %>
